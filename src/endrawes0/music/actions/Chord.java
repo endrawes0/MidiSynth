@@ -6,7 +6,7 @@ import javax.sound.midi.MidiChannel;
 import java.util.List;
 
 /**
- * Created by ahaddad15 on 8/20/17.
+ * Create on 8/20/17.
  */
 public class Chord extends PlayableBase {
 
@@ -18,6 +18,6 @@ public class Chord extends PlayableBase {
     }
 
     public void play(MidiChannel midiChannel) {
-        notes.stream().forEach(playable -> playable.play(midiChannel));
+        notes.forEach(playable -> playable.play(midiChannel));
     }
 }

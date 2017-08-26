@@ -10,14 +10,14 @@ import javax.sound.midi.MidiUnavailableException;
 import java.io.IOException;
 
 /**
- * Created by ahaddad15 on 8/19/17.
+ * Create on 8/19/17.
  */
 public class Instrument {
 
     private javax.sound.midi.Instrument midiInstrument;
     private MidiChannel midiChannel;
 
-    public Instrument(String instrumentName) throws MidiUnavailableException, UnknownInstrument, InvalidMidiDataException, IOException {
+    public Instrument(String instrumentName) throws UnknownInstrument {
         this.midiInstrument = InstrumentMap.getInstance().get(instrumentName);
     }
 

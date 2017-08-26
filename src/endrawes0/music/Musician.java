@@ -4,7 +4,7 @@ import endrawes0.music.actions.Playable;
 import endrawes0.music.instruments.Instrument;
 
 /**
- * Created by ahaddad15 on 8/19/17.
+ * Create on 8/19/17.
  */
 public class Musician {
 

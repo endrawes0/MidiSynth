@@ -5,7 +5,7 @@ import endrawes0.music.TimeSignature;
 import javax.sound.midi.MidiChannel;
 
 /**
- * Created by ahaddad15 on 8/20/17.
+ * Create on 8/20/17.
  */
 public interface Playable {
 

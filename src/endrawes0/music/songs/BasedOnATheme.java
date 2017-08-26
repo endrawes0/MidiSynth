@@ -2,21 +2,18 @@ package endrawes0.music.songs;
 
 import endrawes0.music.actions.Note;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by ahaddad15 on 8/26/17.
+ * Create on 8/26/17.
  */
 public class BasedOnATheme implements Song {
 
-    List<Note> theme;
+    private List<Note> theme;
 
     public BasedOnATheme(Note ... notes){
-        for (Note note : notes) {
-            theme.add(note);
-        }
-
-
+        Collections.addAll(theme, notes);
     }
 
     @Override

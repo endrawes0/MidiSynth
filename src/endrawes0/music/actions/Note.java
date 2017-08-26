@@ -6,7 +6,7 @@ import endrawes0.music.Octave;
 import javax.sound.midi.MidiChannel;
 
 /**
- * Created by ahaddad15 on 8/19/17.
+ * Create on 8/19/17.
  */
 public class Note extends PlayableBase {
     public enum Value {
@@ -93,7 +93,7 @@ public class Note extends PlayableBase {
         }
 
 
-    };
+    }
 
     private Value value;
     private Octave octave = Octave.FIFTH;

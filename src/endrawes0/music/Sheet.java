@@ -7,12 +7,12 @@ import endrawes0.music.instruments.Instrument;
 import java.util.*;
 
 /**
- * Created by ahaddad15 on 8/23/17.
+ * Create on 8/23/17.
  */
 public class Sheet implements Iterable<Sheet.Measure> {
-    private List<Measure> measures = new ArrayList();
+    private List<Measure> measures = new ArrayList<>();
 
-    private Sheet() {};
+    private Sheet() {}
 
     @Override
     public Iterator<Measure> iterator() {
@@ -49,14 +49,14 @@ public class Sheet implements Iterable<Sheet.Measure> {
 
     public static class Measure {
         private TimeSignature timeSignature;
-        private Map<Instrument, List<Playable>> instrumentMap = new HashMap();
+        private Map<Instrument, List<Playable>> instrumentMap = new HashMap<>();
 
         private Measure(TimeSignature timeSignature){
             this.timeSignature = timeSignature;
         }
 
         private void newInstrument(Instrument instrument, Playable playable) {
-            instrumentMap.put(instrument, new ArrayList<>(Arrays.asList(playable)));
+            instrumentMap.put(instrument, new ArrayList<>(Collections.singletonList(playable)));
         }
 
         private boolean canAdd(Instrument instrument, Playable toAdd){
@@ -79,7 +79,7 @@ public class Sheet implements Iterable<Sheet.Measure> {
         }
 
         public List<Playable> getPlayables(Instrument instrument) {
-            return instrumentMap.getOrDefault(instrument, new ArrayList());
+            return instrumentMap.getOrDefault(instrument, new ArrayList<>());
         }
 
         public TimeSignature getTimeSignature() {

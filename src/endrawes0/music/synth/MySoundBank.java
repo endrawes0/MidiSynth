@@ -9,10 +9,7 @@ import java.util.Random;
 public final class MySoundBank {
     private static final String[] general_midi_instruments = new String[]{"Acoustic Grand Piano", "Bright Acoustic Piano", "Electric Grand Piano", "Honky-tonk Piano", "Electric Piano 1", "Electric Piano 2", "Harpsichord", "Clavi", "Celesta", "Glockenspiel", "Music Box", "Vibraphone", "Marimba", "Xylophone", "Tubular Bells", "Dulcimer", "Drawbar Organ", "Percussive Organ", "Rock Organ", "Church Organ", "Reed Organ", "Accordion", "Harmonica", "Tango Accordion", "Acoustic Guitar (nylon)", "Acoustic Guitar (steel)", "Electric Guitar (jazz)", "Electric Guitar (clean)", "Electric Guitar (muted)", "Overdriven Guitar", "Distortion Guitar", "Guitar harmonics", "Acoustic Bass", "Electric Bass (finger)", "Electric Bass (pick)", "Fretless Bass", "Slap Bass 1", "Slap Bass 2", "Synth Bass 1", "Synth Bass 2", "Violin", "Viola", "Cello", "Contrabass", "Tremolo Strings", "Pizzicato Strings", "Orchestral Harp", "Timpani", "String Ensemble 1", "String Ensemble 2", "SynthStrings 1", "SynthStrings 2", "Choir Aahs", "Voice Oohs", "Synth Voice", "Orchestra Hit", "Trumpet", "Trombone", "Tuba", "Muted Trumpet", "French Horn", "Brass Section", "SynthBrass 1", "SynthBrass 2", "Soprano Sax", "Alto Sax", "Tenor Sax", "Baritone Sax", "Oboe", "English Horn", "Bassoon", "Clarinet", "Piccolo", "Flute", "Recorder", "Pan Flute", "Blown Bottle", "Shakuhachi", "Whistle", "Ocarina", "Lead 1 (square)", "Lead 2 (sawtooth)", "Lead 3 (calliope)", "Lead 4 (chiff)", "Lead 5 (charang)", "Lead 6 (voice)", "Lead 7 (fifths)", "Lead 8 (bass + lead)", "Pad 1 (new age)", "Pad 2 (warm)", "Pad 3 (polysynth)", "Pad 4 (choir)", "Pad 5 (bowed)", "Pad 6 (metallic)", "Pad 7 (halo)", "Pad 8 (sweep)", "FX 1 (rain)", "FX 2 (soundtrack)", "FX 3 (crystal)", "FX 4 (atmosphere)", "FX 5 (brightness)", "FX 6 (goblins)", "FX 7 (echoes)", "FX 8 (sci-fi)", "Sitar", "Banjo", "Shamisen", "Koto", "Kalimba", "Bag pipe", "Fiddle", "Shanai", "Tinkle Bell", "Agogo", "Steel Drums", "Woodblock", "Taiko Drum", "Melodic Tom", "Synth Drum", "Reverse Cymbal", "Guitar Fret Noise", "Breath Noise", "Seashore", "Bird Tweet", "Telephone Ring", "Helicopter", "Applause", "Gunshot"};
 
-    public MySoundBank() {
-    }
-
-    public static SF2Soundbank createSoundbank() throws Exception {
+    public static SF2Soundbank createSoundbank() {
         SF2Soundbank var0 = new SF2Soundbank();
         var0.setName("Emergency GM sound set");
         var0.setVendor("Generated");
@@ -117,159 +114,159 @@ public final class MySoundBank {
         SF2Layer var38 = new_bassoon(var0);
         SF2Layer var39 = new_clarinet(var0);
         SF2Layer var40 = new_reverse_cymbal(var0);
-        newInstrument(var0, "Piano", new Patch(0, 0), new SF2Layer[]{var49, var12});
-        newInstrument(var0, "Piano", new Patch(0, 1), new SF2Layer[]{var50, var12});
-        newInstrument(var0, "Piano", new Patch(0, 2), new SF2Layer[]{var13});
-        SF2Instrument var42 = newInstrument(var0, "Honky-tonk Piano", new Patch(0, 3), new SF2Layer[]{var13, var13});
-        SF2InstrumentRegion var43 = (SF2InstrumentRegion)var42.getRegions().get(0);
+        newInstrument(var0, "Piano", new Patch(0, 0), var49, var12);
+        newInstrument(var0, "Piano", new Patch(0, 1), var50, var12);
+        newInstrument(var0, "Piano", new Patch(0, 2), var13);
+        SF2Instrument var42 = newInstrument(var0, "Honky-tonk Piano", new Patch(0, 3), var13, var13);
+        SF2InstrumentRegion var43 = var42.getRegions().get(0);
         var43.putInteger(8, 80);
         var43.putInteger(52, 30);
-        var43 = (SF2InstrumentRegion)var42.getRegions().get(1);
+        var43 = var42.getRegions().get(1);
         var43.putInteger(8, 30);
-        newInstrument(var0, "Rhodes", new Patch(0, 4), new SF2Layer[]{var15});
-        newInstrument(var0, "Rhodes", new Patch(0, 5), new SF2Layer[]{var15});
-        newInstrument(var0, "Clavinet", new Patch(0, 6), new SF2Layer[]{var14});
-        newInstrument(var0, "Clavinet", new Patch(0, 7), new SF2Layer[]{var14});
-        newInstrument(var0, "Rhodes", new Patch(0, 8), new SF2Layer[]{var15});
-        newInstrument(var0, "Bell", new Patch(0, 9), new SF2Layer[]{var28});
-        newInstrument(var0, "Bell", new Patch(0, 10), new SF2Layer[]{var28});
-        newInstrument(var0, "Vibraphone", new Patch(0, 11), new SF2Layer[]{var28});
-        newInstrument(var0, "Marimba", new Patch(0, 12), new SF2Layer[]{var28});
-        newInstrument(var0, "Marimba", new Patch(0, 13), new SF2Layer[]{var28});
-        newInstrument(var0, "Bell", new Patch(0, 14), new SF2Layer[]{var28});
-        newInstrument(var0, "Rock Organ", new Patch(0, 15), new SF2Layer[]{var26});
-        newInstrument(var0, "Rock Organ", new Patch(0, 16), new SF2Layer[]{var26});
-        newInstrument(var0, "Perc Organ", new Patch(0, 17), new SF2Layer[]{var26});
-        newInstrument(var0, "Rock Organ", new Patch(0, 18), new SF2Layer[]{var26});
-        newInstrument(var0, "Church Organ", new Patch(0, 19), new SF2Layer[]{var27});
-        newInstrument(var0, "Accordion", new Patch(0, 20), new SF2Layer[]{var26});
-        newInstrument(var0, "Accordion", new Patch(0, 21), new SF2Layer[]{var26});
-        newInstrument(var0, "Accordion", new Patch(0, 22), new SF2Layer[]{var26});
-        newInstrument(var0, "Accordion", new Patch(0, 23), new SF2Layer[]{var26});
-        newInstrument(var0, "Guitar", new Patch(0, 24), new SF2Layer[]{var16, var17});
-        newInstrument(var0, "Guitar", new Patch(0, 25), new SF2Layer[]{var16, var17});
-        newInstrument(var0, "Guitar", new Patch(0, 26), new SF2Layer[]{var16, var17});
-        newInstrument(var0, "Guitar", new Patch(0, 27), new SF2Layer[]{var16, var17});
-        newInstrument(var0, "Guitar", new Patch(0, 28), new SF2Layer[]{var16, var17});
-        newInstrument(var0, "Distorted Guitar", new Patch(0, 29), new SF2Layer[]{var18});
-        newInstrument(var0, "Distorted Guitar", new Patch(0, 30), new SF2Layer[]{var18});
-        newInstrument(var0, "Guitar", new Patch(0, 31), new SF2Layer[]{var16, var17});
-        newInstrument(var0, "Finger Bass", new Patch(0, 32), new SF2Layer[]{var19});
-        newInstrument(var0, "Finger Bass", new Patch(0, 33), new SF2Layer[]{var19});
-        newInstrument(var0, "Finger Bass", new Patch(0, 34), new SF2Layer[]{var19});
-        newInstrument(var0, "Frettless Bass", new Patch(0, 35), new SF2Layer[]{var20});
-        newInstrument(var0, "Frettless Bass", new Patch(0, 36), new SF2Layer[]{var20});
-        newInstrument(var0, "Frettless Bass", new Patch(0, 37), new SF2Layer[]{var20});
-        newInstrument(var0, "Synth Bass1", new Patch(0, 38), new SF2Layer[]{var21});
-        newInstrument(var0, "Synth Bass2", new Patch(0, 39), new SF2Layer[]{var21});
-        newInstrument(var0, "Solo String", new Patch(0, 40), new SF2Layer[]{var22, var25});
-        newInstrument(var0, "Solo String", new Patch(0, 41), new SF2Layer[]{var22, var25});
-        newInstrument(var0, "Solo String", new Patch(0, 42), new SF2Layer[]{var22, var25});
-        newInstrument(var0, "Solo String", new Patch(0, 43), new SF2Layer[]{var22, var25});
-        newInstrument(var0, "Solo String", new Patch(0, 44), new SF2Layer[]{var22, var25});
-        newInstrument(var0, "Def", new Patch(0, 45), new SF2Layer[]{var13});
-        newInstrument(var0, "Harp", new Patch(0, 46), new SF2Layer[]{var28});
-        newInstrument(var0, "Timpani", new Patch(0, 47), new SF2Layer[]{var30});
-        newInstrument(var0, "Strings", new Patch(0, 48), new SF2Layer[]{var22});
-        var42 = newInstrument(var0, "Slow Strings", new Patch(0, 49), new SF2Layer[]{var22});
-        var43 = (SF2InstrumentRegion)var42.getRegions().get(0);
+        newInstrument(var0, "Rhodes", new Patch(0, 4), var15);
+        newInstrument(var0, "Rhodes", new Patch(0, 5), var15);
+        newInstrument(var0, "Clavinet", new Patch(0, 6), var14);
+        newInstrument(var0, "Clavinet", new Patch(0, 7), var14);
+        newInstrument(var0, "Rhodes", new Patch(0, 8), var15);
+        newInstrument(var0, "Bell", new Patch(0, 9), var28);
+        newInstrument(var0, "Bell", new Patch(0, 10), var28);
+        newInstrument(var0, "Vibraphone", new Patch(0, 11), var28);
+        newInstrument(var0, "Marimba", new Patch(0, 12), var28);
+        newInstrument(var0, "Marimba", new Patch(0, 13), var28);
+        newInstrument(var0, "Bell", new Patch(0, 14), var28);
+        newInstrument(var0, "Rock Organ", new Patch(0, 15), var26);
+        newInstrument(var0, "Rock Organ", new Patch(0, 16), var26);
+        newInstrument(var0, "Perc Organ", new Patch(0, 17), var26);
+        newInstrument(var0, "Rock Organ", new Patch(0, 18), var26);
+        newInstrument(var0, "Church Organ", new Patch(0, 19), var27);
+        newInstrument(var0, "Accordion", new Patch(0, 20), var26);
+        newInstrument(var0, "Accordion", new Patch(0, 21), var26);
+        newInstrument(var0, "Accordion", new Patch(0, 22), var26);
+        newInstrument(var0, "Accordion", new Patch(0, 23), var26);
+        newInstrument(var0, "Guitar", new Patch(0, 24), var16, var17);
+        newInstrument(var0, "Guitar", new Patch(0, 25), var16, var17);
+        newInstrument(var0, "Guitar", new Patch(0, 26), var16, var17);
+        newInstrument(var0, "Guitar", new Patch(0, 27), var16, var17);
+        newInstrument(var0, "Guitar", new Patch(0, 28), var16, var17);
+        newInstrument(var0, "Distorted Guitar", new Patch(0, 29), var18);
+        newInstrument(var0, "Distorted Guitar", new Patch(0, 30), var18);
+        newInstrument(var0, "Guitar", new Patch(0, 31), var16, var17);
+        newInstrument(var0, "Finger Bass", new Patch(0, 32), var19);
+        newInstrument(var0, "Finger Bass", new Patch(0, 33), var19);
+        newInstrument(var0, "Finger Bass", new Patch(0, 34), var19);
+        newInstrument(var0, "Frettless Bass", new Patch(0, 35), var20);
+        newInstrument(var0, "Frettless Bass", new Patch(0, 36), var20);
+        newInstrument(var0, "Frettless Bass", new Patch(0, 37), var20);
+        newInstrument(var0, "Synth Bass1", new Patch(0, 38), var21);
+        newInstrument(var0, "Synth Bass2", new Patch(0, 39), var21);
+        newInstrument(var0, "Solo String", new Patch(0, 40), var22, var25);
+        newInstrument(var0, "Solo String", new Patch(0, 41), var22, var25);
+        newInstrument(var0, "Solo String", new Patch(0, 42), var22, var25);
+        newInstrument(var0, "Solo String", new Patch(0, 43), var22, var25);
+        newInstrument(var0, "Solo String", new Patch(0, 44), var22, var25);
+        newInstrument(var0, "Def", new Patch(0, 45), var13);
+        newInstrument(var0, "Harp", new Patch(0, 46), var28);
+        newInstrument(var0, "Timpani", new Patch(0, 47), var30);
+        newInstrument(var0, "Strings", new Patch(0, 48), var22);
+        var42 = newInstrument(var0, "Slow Strings", new Patch(0, 49), var22);
+        var43 = var42.getRegions().get(0);
         var43.putInteger(34, 2500);
         var43.putInteger(38, 2000);
-        newInstrument(var0, "Synth Strings", new Patch(0, 50), new SF2Layer[]{var22});
-        newInstrument(var0, "Synth Strings", new Patch(0, 51), new SF2Layer[]{var22});
-        newInstrument(var0, "Choir", new Patch(0, 52), new SF2Layer[]{var24});
-        newInstrument(var0, "Choir", new Patch(0, 53), new SF2Layer[]{var24});
-        newInstrument(var0, "Choir", new Patch(0, 54), new SF2Layer[]{var24});
-        SF2Instrument var44 = newInstrument(var0, "Orch Hit", new Patch(0, 55), new SF2Layer[]{var23, var23, var30});
-        var43 = (SF2InstrumentRegion)var44.getRegions().get(0);
+        newInstrument(var0, "Synth Strings", new Patch(0, 50), var22);
+        newInstrument(var0, "Synth Strings", new Patch(0, 51), var22);
+        newInstrument(var0, "Choir", new Patch(0, 52), var24);
+        newInstrument(var0, "Choir", new Patch(0, 53), var24);
+        newInstrument(var0, "Choir", new Patch(0, 54), var24);
+        SF2Instrument var44 = newInstrument(var0, "Orch Hit", new Patch(0, 55), var23, var23, var30);
+        var43 = var44.getRegions().get(0);
         var43.putInteger(51, -12);
         var43.putInteger(48, -100);
-        newInstrument(var0, "Trumpet", new Patch(0, 56), new SF2Layer[]{var32});
-        newInstrument(var0, "Trombone", new Patch(0, 57), new SF2Layer[]{var33});
-        newInstrument(var0, "Trombone", new Patch(0, 58), new SF2Layer[]{var33});
-        newInstrument(var0, "Trumpet", new Patch(0, 59), new SF2Layer[]{var32});
-        newInstrument(var0, "Horn", new Patch(0, 60), new SF2Layer[]{var35});
-        newInstrument(var0, "Brass Section", new Patch(0, 61), new SF2Layer[]{var34});
-        newInstrument(var0, "Brass Section", new Patch(0, 62), new SF2Layer[]{var34});
-        newInstrument(var0, "Brass Section", new Patch(0, 63), new SF2Layer[]{var34});
-        newInstrument(var0, "Sax", new Patch(0, 64), new SF2Layer[]{var36});
-        newInstrument(var0, "Sax", new Patch(0, 65), new SF2Layer[]{var36});
-        newInstrument(var0, "Sax", new Patch(0, 66), new SF2Layer[]{var36});
-        newInstrument(var0, "Sax", new Patch(0, 67), new SF2Layer[]{var36});
-        newInstrument(var0, "Oboe", new Patch(0, 68), new SF2Layer[]{var37});
-        newInstrument(var0, "Horn", new Patch(0, 69), new SF2Layer[]{var35});
-        newInstrument(var0, "Bassoon", new Patch(0, 70), new SF2Layer[]{var38});
-        newInstrument(var0, "Clarinet", new Patch(0, 71), new SF2Layer[]{var39});
-        newInstrument(var0, "Flute", new Patch(0, 72), new SF2Layer[]{var29});
-        newInstrument(var0, "Flute", new Patch(0, 73), new SF2Layer[]{var29});
-        newInstrument(var0, "Flute", new Patch(0, 74), new SF2Layer[]{var29});
-        newInstrument(var0, "Flute", new Patch(0, 75), new SF2Layer[]{var29});
-        newInstrument(var0, "Flute", new Patch(0, 76), new SF2Layer[]{var29});
-        newInstrument(var0, "Flute", new Patch(0, 77), new SF2Layer[]{var29});
-        newInstrument(var0, "Flute", new Patch(0, 78), new SF2Layer[]{var29});
-        newInstrument(var0, "Flute", new Patch(0, 79), new SF2Layer[]{var29});
-        newInstrument(var0, "Organ", new Patch(0, 80), new SF2Layer[]{var26});
-        newInstrument(var0, "Organ", new Patch(0, 81), new SF2Layer[]{var26});
-        newInstrument(var0, "Flute", new Patch(0, 82), new SF2Layer[]{var29});
-        newInstrument(var0, "Organ", new Patch(0, 83), new SF2Layer[]{var26});
-        newInstrument(var0, "Organ", new Patch(0, 84), new SF2Layer[]{var26});
-        newInstrument(var0, "Choir", new Patch(0, 85), new SF2Layer[]{var24});
-        newInstrument(var0, "Organ", new Patch(0, 86), new SF2Layer[]{var26});
-        newInstrument(var0, "Organ", new Patch(0, 87), new SF2Layer[]{var26});
-        newInstrument(var0, "Synth Strings", new Patch(0, 88), new SF2Layer[]{var22});
-        newInstrument(var0, "Organ", new Patch(0, 89), new SF2Layer[]{var26});
-        newInstrument(var0, "Def", new Patch(0, 90), new SF2Layer[]{var13});
-        newInstrument(var0, "Choir", new Patch(0, 91), new SF2Layer[]{var24});
-        newInstrument(var0, "Organ", new Patch(0, 92), new SF2Layer[]{var26});
-        newInstrument(var0, "Organ", new Patch(0, 93), new SF2Layer[]{var26});
-        newInstrument(var0, "Organ", new Patch(0, 94), new SF2Layer[]{var26});
-        newInstrument(var0, "Organ", new Patch(0, 95), new SF2Layer[]{var26});
-        newInstrument(var0, "Organ", new Patch(0, 96), new SF2Layer[]{var26});
-        newInstrument(var0, "Organ", new Patch(0, 97), new SF2Layer[]{var26});
-        newInstrument(var0, "Bell", new Patch(0, 98), new SF2Layer[]{var28});
-        newInstrument(var0, "Organ", new Patch(0, 99), new SF2Layer[]{var26});
-        newInstrument(var0, "Organ", new Patch(0, 100), new SF2Layer[]{var26});
-        newInstrument(var0, "Organ", new Patch(0, 101), new SF2Layer[]{var26});
-        newInstrument(var0, "Def", new Patch(0, 102), new SF2Layer[]{var13});
-        newInstrument(var0, "Synth Strings", new Patch(0, 103), new SF2Layer[]{var22});
-        newInstrument(var0, "Def", new Patch(0, 104), new SF2Layer[]{var13});
-        newInstrument(var0, "Def", new Patch(0, 105), new SF2Layer[]{var13});
-        newInstrument(var0, "Def", new Patch(0, 106), new SF2Layer[]{var13});
-        newInstrument(var0, "Def", new Patch(0, 107), new SF2Layer[]{var13});
-        newInstrument(var0, "Marimba", new Patch(0, 108), new SF2Layer[]{var28});
-        newInstrument(var0, "Sax", new Patch(0, 109), new SF2Layer[]{var36});
-        newInstrument(var0, "Solo String", new Patch(0, 110), new SF2Layer[]{var22, var25});
-        newInstrument(var0, "Oboe", new Patch(0, 111), new SF2Layer[]{var37});
-        newInstrument(var0, "Bell", new Patch(0, 112), new SF2Layer[]{var28});
-        newInstrument(var0, "Melodic Toms", new Patch(0, 113), new SF2Layer[]{var31});
-        newInstrument(var0, "Marimba", new Patch(0, 114), new SF2Layer[]{var28});
-        newInstrument(var0, "Melodic Toms", new Patch(0, 115), new SF2Layer[]{var31});
-        newInstrument(var0, "Melodic Toms", new Patch(0, 116), new SF2Layer[]{var31});
-        newInstrument(var0, "Melodic Toms", new Patch(0, 117), new SF2Layer[]{var31});
-        newInstrument(var0, "Reverse Cymbal", new Patch(0, 118), new SF2Layer[]{var40});
-        newInstrument(var0, "Reverse Cymbal", new Patch(0, 119), new SF2Layer[]{var40});
-        newInstrument(var0, "Guitar", new Patch(0, 120), new SF2Layer[]{var16});
-        newInstrument(var0, "Def", new Patch(0, 121), new SF2Layer[]{var13});
-        var44 = newInstrument(var0, "Seashore/Reverse Cymbal", new Patch(0, 122), new SF2Layer[]{var40});
-        var43 = (SF2InstrumentRegion)var44.getRegions().get(0);
+        newInstrument(var0, "Trumpet", new Patch(0, 56), var32);
+        newInstrument(var0, "Trombone", new Patch(0, 57), var33);
+        newInstrument(var0, "Trombone", new Patch(0, 58), var33);
+        newInstrument(var0, "Trumpet", new Patch(0, 59), var32);
+        newInstrument(var0, "Horn", new Patch(0, 60), var35);
+        newInstrument(var0, "Brass Section", new Patch(0, 61), var34);
+        newInstrument(var0, "Brass Section", new Patch(0, 62), var34);
+        newInstrument(var0, "Brass Section", new Patch(0, 63), var34);
+        newInstrument(var0, "Sax", new Patch(0, 64), var36);
+        newInstrument(var0, "Sax", new Patch(0, 65), var36);
+        newInstrument(var0, "Sax", new Patch(0, 66), var36);
+        newInstrument(var0, "Sax", new Patch(0, 67), var36);
+        newInstrument(var0, "Oboe", new Patch(0, 68), var37);
+        newInstrument(var0, "Horn", new Patch(0, 69), var35);
+        newInstrument(var0, "Bassoon", new Patch(0, 70), var38);
+        newInstrument(var0, "Clarinet", new Patch(0, 71), var39);
+        newInstrument(var0, "Flute", new Patch(0, 72), var29);
+        newInstrument(var0, "Flute", new Patch(0, 73), var29);
+        newInstrument(var0, "Flute", new Patch(0, 74), var29);
+        newInstrument(var0, "Flute", new Patch(0, 75), var29);
+        newInstrument(var0, "Flute", new Patch(0, 76), var29);
+        newInstrument(var0, "Flute", new Patch(0, 77), var29);
+        newInstrument(var0, "Flute", new Patch(0, 78), var29);
+        newInstrument(var0, "Flute", new Patch(0, 79), var29);
+        newInstrument(var0, "Organ", new Patch(0, 80), var26);
+        newInstrument(var0, "Organ", new Patch(0, 81), var26);
+        newInstrument(var0, "Flute", new Patch(0, 82), var29);
+        newInstrument(var0, "Organ", new Patch(0, 83), var26);
+        newInstrument(var0, "Organ", new Patch(0, 84), var26);
+        newInstrument(var0, "Choir", new Patch(0, 85), var24);
+        newInstrument(var0, "Organ", new Patch(0, 86), var26);
+        newInstrument(var0, "Organ", new Patch(0, 87), var26);
+        newInstrument(var0, "Synth Strings", new Patch(0, 88), var22);
+        newInstrument(var0, "Organ", new Patch(0, 89), var26);
+        newInstrument(var0, "Def", new Patch(0, 90), var13);
+        newInstrument(var0, "Choir", new Patch(0, 91), var24);
+        newInstrument(var0, "Organ", new Patch(0, 92), var26);
+        newInstrument(var0, "Organ", new Patch(0, 93), var26);
+        newInstrument(var0, "Organ", new Patch(0, 94), var26);
+        newInstrument(var0, "Organ", new Patch(0, 95), var26);
+        newInstrument(var0, "Organ", new Patch(0, 96), var26);
+        newInstrument(var0, "Organ", new Patch(0, 97), var26);
+        newInstrument(var0, "Bell", new Patch(0, 98), var28);
+        newInstrument(var0, "Organ", new Patch(0, 99), var26);
+        newInstrument(var0, "Organ", new Patch(0, 100), var26);
+        newInstrument(var0, "Organ", new Patch(0, 101), var26);
+        newInstrument(var0, "Def", new Patch(0, 102), var13);
+        newInstrument(var0, "Synth Strings", new Patch(0, 103), var22);
+        newInstrument(var0, "Def", new Patch(0, 104), var13);
+        newInstrument(var0, "Def", new Patch(0, 105), var13);
+        newInstrument(var0, "Def", new Patch(0, 106), var13);
+        newInstrument(var0, "Def", new Patch(0, 107), var13);
+        newInstrument(var0, "Marimba", new Patch(0, 108), var28);
+        newInstrument(var0, "Sax", new Patch(0, 109), var36);
+        newInstrument(var0, "Solo String", new Patch(0, 110), var22, var25);
+        newInstrument(var0, "Oboe", new Patch(0, 111), var37);
+        newInstrument(var0, "Bell", new Patch(0, 112), var28);
+        newInstrument(var0, "Melodic Toms", new Patch(0, 113), var31);
+        newInstrument(var0, "Marimba", new Patch(0, 114), var28);
+        newInstrument(var0, "Melodic Toms", new Patch(0, 115), var31);
+        newInstrument(var0, "Melodic Toms", new Patch(0, 116), var31);
+        newInstrument(var0, "Melodic Toms", new Patch(0, 117), var31);
+        newInstrument(var0, "Reverse Cymbal", new Patch(0, 118), var40);
+        newInstrument(var0, "Reverse Cymbal", new Patch(0, 119), var40);
+        newInstrument(var0, "Guitar", new Patch(0, 120), var16);
+        newInstrument(var0, "Def", new Patch(0, 121), var13);
+        var44 = newInstrument(var0, "Seashore/Reverse Cymbal", new Patch(0, 122), var40);
+        var43 = var44.getRegions().get(0);
         var43.putInteger(37, 1000);
         var43.putInteger(36, 18500);
         var43.putInteger(38, 4500);
         var43.putInteger(8, -4500);
-        var44 = newInstrument(var0, "Bird/Flute", new Patch(0, 123), new SF2Layer[]{var29});
-        var43 = (SF2InstrumentRegion)var44.getRegions().get(0);
+        var44 = newInstrument(var0, "Bird/Flute", new Patch(0, 123), var29);
+        var43 = var44.getRegions().get(0);
         var43.putInteger(51, 24);
         var43.putInteger(36, -3000);
         var43.putInteger(37, 1000);
-        newInstrument(var0, "Def", new Patch(0, 124), new SF2Layer[]{var7});
-        var44 = newInstrument(var0, "Seashore/Reverse Cymbal", new Patch(0, 125), new SF2Layer[]{var40});
-        var43 = (SF2InstrumentRegion)var44.getRegions().get(0);
+        newInstrument(var0, "Def", new Patch(0, 124), var7);
+        var44 = newInstrument(var0, "Seashore/Reverse Cymbal", new Patch(0, 125), var40);
+        var43 = var44.getRegions().get(0);
         var43.putInteger(37, 1000);
         var43.putInteger(36, 18500);
         var43.putInteger(38, 4500);
         var43.putInteger(8, -4500);
-        newInstrument(var0, "Applause/crash_cymbal", new Patch(0, 126), new SF2Layer[]{var6});
-        newInstrument(var0, "Gunshot/side_stick", new Patch(0, 127), new SF2Layer[]{var7});
+        newInstrument(var0, "Applause/crash_cymbal", new Patch(0, 126), var6);
+        newInstrument(var0, "Gunshot/side_stick", new Patch(0, 127), var7);
         SF2Instrument[] var51 = var0.getInstruments();
         int var45 = var51.length;
 
@@ -306,7 +303,7 @@ public final class MySoundBank {
 
         SF2Sample var24 = newSimpleFFTSample(var0, "EPiano", var4, var5);
         SF2Layer var25 = newLayer(var0, "EPiano", var24);
-        SF2Region var21 = (SF2Region)var25.getRegions().get(0);
+        SF2Region var21 = var25.getRegions().get(0);
         var21.putInteger(54, 1);
         var21.putInteger(34, -12000);
         var21.putInteger(38, 0);
@@ -362,7 +359,7 @@ public final class MySoundBank {
 
         SF2Sample var22 = newSimpleFFTSample(var0, "Guitar", var3, var4);
         SF2Layer var23 = newLayer(var0, "Guitar", var22);
-        SF2Region var21 = (SF2Region)var23.getRegions().get(0);
+        SF2Region var21 = var23.getRegions().get(0);
         var21.putInteger(54, 1);
         var21.putInteger(34, -12000);
         var21.putInteger(38, 0);
@@ -419,7 +416,7 @@ public final class MySoundBank {
 
         SF2Sample var22 = newSimpleFFTSample_dist(var0, "Distorted Guitar", var3, var4, 10000.0D);
         SF2Layer var23 = newLayer(var0, "Distorted Guitar", var22);
-        SF2Region var21 = (SF2Region)var23.getRegions().get(0);
+        SF2Region var21 = var23.getRegions().get(0);
         var21.putInteger(54, 1);
         var21.putInteger(34, -12000);
         var21.putInteger(38, 0);
@@ -459,7 +456,7 @@ public final class MySoundBank {
             var13 *= 0.9994D;
         }
 
-        fadeUp((double[])var4, 80);
+        fadeUp(var4, 80);
         SF2Sample var9 = newSimpleDrumSample(var0, "Guitar Noise", var4);
         SF2Layer var10 = new SF2Layer(var0);
         var10.setName("Guitar Noise");
@@ -517,7 +514,7 @@ public final class MySoundBank {
 
         SF2Sample var21 = newSimpleFFTSample(var0, "Grand Piano", var3, var4, 200);
         SF2Layer var22 = newLayer(var0, "Grand Piano", var21);
-        SF2Region var17 = (SF2Region)var22.getRegions().get(0);
+        SF2Region var17 = var22.getRegions().get(0);
         var17.putInteger(54, 1);
         var17.putInteger(34, -7000);
         var17.putInteger(38, 0);
@@ -574,7 +571,7 @@ public final class MySoundBank {
 
         SF2Sample var21 = newSimpleFFTSample(var0, "Grand Piano", var3, var4, 200);
         SF2Layer var22 = newLayer(var0, "Grand Piano", var21);
-        SF2Region var17 = (SF2Region)var22.getRegions().get(0);
+        SF2Region var17 = var22.getRegions().get(0);
         var17.putInteger(54, 1);
         var17.putInteger(34, -7000);
         var17.putInteger(38, 0);
@@ -619,7 +616,7 @@ public final class MySoundBank {
             var13 *= 0.9997D;
         }
 
-        fadeUp((double[])var4, 80);
+        fadeUp(var4, 80);
         SF2Sample var9 = newSimpleDrumSample(var0, "Piano Hammer", var4);
         SF2Layer var10 = new SF2Layer(var0);
         var10.setName("Piano Hammer");
@@ -674,7 +671,7 @@ public final class MySoundBank {
         complexGaussianDist(var3, var4 * 17.5D, 1.0D, 0.01D);
         SF2Sample var21 = newSimpleFFTSample(var0, "EPiano", var3, var4, 200);
         SF2Layer var22 = newLayer(var0, "EPiano", var21);
-        SF2Region var17 = (SF2Region)var22.getRegions().get(0);
+        SF2Region var17 = var22.getRegions().get(0);
         var17.putInteger(54, 1);
         var17.putInteger(34, -12000);
         var17.putInteger(38, 0);
@@ -709,7 +706,7 @@ public final class MySoundBank {
 
         SF2Sample var24 = newSimpleFFTSample(var0, "EPiano", var4, var5);
         SF2Layer var25 = newLayer(var0, "EPiano", var24);
-        SF2Region var21 = (SF2Region)var25.getRegions().get(0);
+        SF2Region var21 = var25.getRegions().get(0);
         var21.putInteger(54, 1);
         var21.putInteger(34, -12000);
         var21.putInteger(38, 0);
@@ -744,7 +741,7 @@ public final class MySoundBank {
 
         SF2Sample var24 = newSimpleFFTSample(var0, "EPiano", var4, var5);
         SF2Layer var25 = newLayer(var0, "EPiano", var24);
-        SF2Region var21 = (SF2Region)var25.getRegions().get(0);
+        SF2Region var21 = var25.getRegions().get(0);
         var21.putInteger(54, 1);
         var21.putInteger(34, -12000);
         var21.putInteger(38, 0);
@@ -789,7 +786,7 @@ public final class MySoundBank {
 
         SF2Sample var22 = newSimpleFFTSample(var0, "Bass", var3, var4);
         SF2Layer var23 = newLayer(var0, "Bass", var22);
-        SF2Region var21 = (SF2Region)var23.getRegions().get(0);
+        SF2Region var21 = var23.getRegions().get(0);
         var21.putInteger(54, 1);
         var21.putInteger(34, -12000);
         var21.putInteger(38, 0);
@@ -834,7 +831,7 @@ public final class MySoundBank {
 
         SF2Sample var22 = newSimpleFFTSample(var0, "Bass", var3, var4);
         SF2Layer var23 = newLayer(var0, "Bass", var22);
-        SF2Region var21 = (SF2Region)var23.getRegions().get(0);
+        SF2Region var21 = var23.getRegions().get(0);
         var21.putInteger(54, 1);
         var21.putInteger(34, -12000);
         var21.putInteger(38, 0);
@@ -880,7 +877,7 @@ public final class MySoundBank {
 
         SF2Sample var22 = newSimpleFFTSample(var0, "Bass2", var3, var4);
         SF2Layer var23 = newLayer(var0, "Bass2", var22);
-        SF2Region var21 = (SF2Region)var23.getRegions().get(0);
+        SF2Region var21 = var23.getRegions().get(0);
         var21.putInteger(54, 1);
         var21.putInteger(34, -8000);
         var21.putInteger(38, 0);
@@ -928,7 +925,7 @@ public final class MySoundBank {
 
         SF2Sample var22 = newSimpleFFTSample(var0, "Strings", var3, var4);
         SF2Layer var23 = newLayer(var0, "Strings", var22);
-        SF2Region var21 = (SF2Region)var23.getRegions().get(0);
+        SF2Region var21 = var23.getRegions().get(0);
         var21.putInteger(54, 1);
         var21.putInteger(34, -5000);
         var21.putInteger(38, 1000);
@@ -961,7 +958,7 @@ public final class MySoundBank {
         complexGaussianDist(var3, var4 * 4.0D, 300.0D, 1.0D);
         SF2Sample var21 = newSimpleFFTSample(var0, "Och Strings", var3, var4);
         SF2Layer var22 = newLayer(var0, "Och Strings", var21);
-        SF2Region var20 = (SF2Region)var22.getRegions().get(0);
+        SF2Region var20 = var22.getRegions().get(0);
         var20.putInteger(54, 1);
         var20.putInteger(34, -5000);
         var20.putInteger(38, 200);
@@ -991,7 +988,7 @@ public final class MySoundBank {
 
         SF2Sample var21 = newSimpleFFTSample(var0, "Strings", var3, var4);
         SF2Layer var22 = newLayer(var0, "Strings", var21);
-        SF2Region var20 = (SF2Region)var22.getRegions().get(0);
+        SF2Region var20 = var22.getRegions().get(0);
         var20.putInteger(54, 1);
         var20.putInteger(34, -5000);
         var20.putInteger(38, 1000);
@@ -1032,7 +1029,7 @@ public final class MySoundBank {
 
         SF2Sample var22 = newSimpleFFTSample(var0, "Strings", var3, var4);
         SF2Layer var23 = newLayer(var0, "Strings", var22);
-        SF2Region var21 = (SF2Region)var23.getRegions().get(0);
+        SF2Region var21 = var23.getRegions().get(0);
         var21.putInteger(54, 1);
         var21.putInteger(34, -5000);
         var21.putInteger(38, 1000);
@@ -1063,7 +1060,7 @@ public final class MySoundBank {
 
         SF2Sample var22 = newSimpleFFTSample(var0, "Organ", var4, var5);
         SF2Layer var23 = newLayer(var0, "Organ", var22);
-        SF2Region var21 = (SF2Region)var23.getRegions().get(0);
+        SF2Region var21 = var23.getRegions().get(0);
         var21.putInteger(54, 1);
         var21.putInteger(34, -6000);
         var21.putInteger(38, -1000);
@@ -1136,7 +1133,7 @@ public final class MySoundBank {
 
         SF2Sample var22 = newSimpleFFTSample(var0, "Organ", var3, var4);
         SF2Layer var23 = newLayer(var0, "Organ", var22);
-        SF2Region var21 = (SF2Region)var23.getRegions().get(0);
+        SF2Region var21 = var23.getRegions().get(0);
         var21.putInteger(54, 1);
         var21.putInteger(34, -10000);
         var21.putInteger(38, -1000);
@@ -1187,7 +1184,7 @@ public final class MySoundBank {
         complexGaussianDist(var3, var4 * 17.0D, 30.0D, 6.0D);
         SF2Sample var6 = newSimpleFFTSample(var0, "Flute", var3, var4);
         SF2Layer var7 = newLayer(var0, "Flute", var6);
-        SF2Region var8 = (SF2Region)var7.getRegions().get(0);
+        SF2Region var8 = var7.getRegions().get(0);
         var8.putInteger(54, 1);
         var8.putInteger(34, -6000);
         var8.putInteger(38, -1000);
@@ -1220,7 +1217,7 @@ public final class MySoundBank {
         complexGaussianDist(var3, var4 * 2.0D, 100.0D, 1.0D);
         SF2Sample var17 = newSimpleFFTSample(var0, "Horn", var3, var4);
         SF2Layer var15 = newLayer(var0, "Horn", var17);
-        SF2Region var16 = (SF2Region)var15.getRegions().get(0);
+        SF2Region var16 = var15.getRegions().get(0);
         var16.putInteger(54, 1);
         var16.putInteger(34, -6000);
         var16.putInteger(38, -1000);
@@ -1262,7 +1259,7 @@ public final class MySoundBank {
         complexGaussianDist(var3, var4 * 5.0D, 300.0D, 3.0D);
         SF2Sample var18 = newSimpleFFTSample(var0, "Trumpet", var3, var4);
         SF2Layer var16 = newLayer(var0, "Trumpet", var18);
-        SF2Region var17 = (SF2Region)var16.getRegions().get(0);
+        SF2Region var17 = var16.getRegions().get(0);
         var17.putInteger(54, 1);
         var17.putInteger(34, -10000);
         var17.putInteger(38, 0);
@@ -1304,7 +1301,7 @@ public final class MySoundBank {
         complexGaussianDist(var3, var4 * 6.0D, 300.0D, 2.0D);
         SF2Sample var21 = newSimpleFFTSample(var0, "Brass Section", var3, var4);
         SF2Layer var18 = newLayer(var0, "Brass Section", var21);
-        SF2Region var19 = (SF2Region)var18.getRegions().get(0);
+        SF2Region var19 = var18.getRegions().get(0);
         var19.putInteger(54, 1);
         var19.putInteger(34, -9200);
         var19.putInteger(38, -1000);
@@ -1344,7 +1341,7 @@ public final class MySoundBank {
         complexGaussianDist(var3, var4 * 6.0D, 300.0D, 2.0D);
         SF2Sample var18 = newSimpleFFTSample(var0, "Trombone", var3, var4);
         SF2Layer var16 = newLayer(var0, "Trombone", var18);
-        SF2Region var17 = (SF2Region)var16.getRegions().get(0);
+        SF2Region var17 = var16.getRegions().get(0);
         var17.putInteger(54, 1);
         var17.putInteger(34, -8000);
         var17.putInteger(38, -1000);
@@ -1381,7 +1378,7 @@ public final class MySoundBank {
         complexGaussianDist(var3, var4 * 4.0D, 200.0D, 1.0D);
         SF2Sample var17 = newSimpleFFTSample(var0, "Sax", var3, var4);
         SF2Layer var15 = newLayer(var0, "Sax", var17);
-        SF2Region var16 = (SF2Region)var15.getRegions().get(0);
+        SF2Region var16 = var15.getRegions().get(0);
         var16.putInteger(54, 1);
         var16.putInteger(34, -6000);
         var16.putInteger(38, -1000);
@@ -1422,7 +1419,7 @@ public final class MySoundBank {
         complexGaussianDist(var3, var4 * 20.0D, 0.01D, 0.1D);
         SF2Sample var6 = newSimpleFFTSample(var0, "Oboe", var3, var4);
         SF2Layer var7 = newLayer(var0, "Oboe", var6);
-        SF2Region var8 = (SF2Region)var7.getRegions().get(0);
+        SF2Region var8 = var7.getRegions().get(0);
         var8.putInteger(54, 1);
         var8.putInteger(34, -6000);
         var8.putInteger(38, -1000);
@@ -1461,7 +1458,7 @@ public final class MySoundBank {
         complexGaussianDist(var3, var4 * 20.0D, 0.01D, 0.1D);
         SF2Sample var6 = newSimpleFFTSample(var0, "Flute", var3, var4);
         SF2Layer var7 = newLayer(var0, "Flute", var6);
-        SF2Region var8 = (SF2Region)var7.getRegions().get(0);
+        SF2Region var8 = var7.getRegions().get(0);
         var8.putInteger(54, 1);
         var8.putInteger(34, -6000);
         var8.putInteger(38, -1000);
@@ -1515,7 +1512,7 @@ public final class MySoundBank {
         complexGaussianDist(var3, var4 * 17.0D, 30.0D, 6.0D);
         SF2Sample var6 = newSimpleFFTSample(var0, "Clarinet", var3, var4);
         SF2Layer var7 = newLayer(var0, "Clarinet", var6);
-        SF2Region var8 = (SF2Region)var7.getRegions().get(0);
+        SF2Region var8 = var7.getRegions().get(0);
         var8.putInteger(54, 1);
         var8.putInteger(34, -6000);
         var8.putInteger(38, -1000);
@@ -1549,7 +1546,7 @@ public final class MySoundBank {
             var4[var9] *= var10 * var10;
         }
 
-        fadeUp((double[])var4, 40);
+        fadeUp(var4, 40);
         double[] var1 = var4;
         short var12 = 16384;
         var4 = new double[2 * var12];
@@ -2215,7 +2212,7 @@ public final class MySoundBank {
         normalize(var2, 0.9D);
         float[] var16 = toFloat(var2);
         var16 = loopExtend(var16, var16.length + 512);
-        fadeUp((float[])var16, 80);
+        fadeUp(var16, 80);
         byte[] var12 = toBytes(var16, var8);
         SF2Sample var13 = new SF2Sample(var0);
         var13.setName(var1);

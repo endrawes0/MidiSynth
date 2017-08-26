@@ -4,20 +4,20 @@ import endrawes0.music.synth.SynthesizerSingleton;
 import endrawes0.music.exception.UnknownInstrument;
 
 import javax.sound.midi.*;
-import java.io.IOException;
+import javax.sound.midi.Instrument;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by ahaddad15 on 8/19/17.
+ * Create on 8/19/17.
  */
 public class InstrumentMap {
 
-    Map<String, javax.sound.midi.Instrument> map = new HashMap();
+    private Map<String, Instrument> map = new HashMap<>();
 
     private static InstrumentMap ourInstance;
 
-    public static InstrumentMap getInstance() throws MidiUnavailableException, InvalidMidiDataException, IOException {
+    public static InstrumentMap getInstance() {
         if(ourInstance == null)
             ourInstance = new InstrumentMap(SynthesizerSingleton.getInstance());
 
@@ -26,8 +26,8 @@ public class InstrumentMap {
 
     private InstrumentMap(Synthesizer synthesizer) {
         javax.sound.midi.Instrument[] instruments = synthesizer.getAvailableInstruments();
-        for(int i = 0; i < instruments.length; i++){
-            map.put(instruments[i].getName(), instruments[i]);
+        for (Instrument instrument : instruments) {
+            map.put(instrument.getName(), instrument);
         }
     }
 

@@ -5,7 +5,7 @@ import endrawes0.music.synth.MySoundBank;
 import endrawes0.util.DoOnce;
 
 /**
- * Created by ahaddad15 on 8/19/17.
+ * Create on 8/19/17.
  */
 public class SynthesizerSingleton {
 
@@ -14,8 +14,7 @@ public class SynthesizerSingleton {
         DoOnce.doOnce(() -> {
             try {
                 ourInstance = new SoftSynthesizer();
-                MySoundBank mySoundBank = new MySoundBank();
-                ourInstance.loadAllInstruments(mySoundBank.createSoundbank());
+                ourInstance.loadAllInstruments(MySoundBank.createSoundbank());
             } catch (Exception e) {
                 e.printStackTrace();
             }

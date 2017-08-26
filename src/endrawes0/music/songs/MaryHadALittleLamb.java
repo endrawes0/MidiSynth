@@ -15,14 +15,14 @@ import java.io.IOException;
 import java.util.Arrays;
 
 /**
- * Created by ahaddad15 on 8/19/17.
+ * Create on 8/19/17.
  */
 public class MaryHadALittleLamb implements Song {
 
     private static final int TEMPO = 100; //bpm
     private Band band;
 
-    public MaryHadALittleLamb() throws MidiUnavailableException, UnknownInstrument, TooManyBeatsPerMeasure, InvalidMidiDataException, IOException {
+    public MaryHadALittleLamb() throws UnknownInstrument, TooManyBeatsPerMeasure {
         band = new Band();
         DrumSet drums = new DrumSet();
 

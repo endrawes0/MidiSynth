@@ -1,17 +1,16 @@
 package endrawes0.music.actions;
 
-import endrawes0.music.Duration;
 import endrawes0.music.TimeSignature;
 
 import javax.sound.midi.MidiChannel;
 import java.util.Random;
 
 /**
- * Created by ahaddad15 on 8/26/17.
+ * Create on 8/26/17.
  */
 public class Tremelo  extends PlayableBase {
 
-    Note note;
+    private Note note;
 
     public Tremelo(Note note) {
         super(note.duration);

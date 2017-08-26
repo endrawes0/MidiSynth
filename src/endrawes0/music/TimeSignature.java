@@ -1,7 +1,7 @@
 package endrawes0.music;
 
 /**
- * Created by ahaddad15 on 8/23/17.
+ * Create on 8/23/17.
  */
 public class TimeSignature {
     private int beatsPerMeasure;

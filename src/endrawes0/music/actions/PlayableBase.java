@@ -6,7 +6,7 @@ import endrawes0.music.TimeSignature;
 import javax.sound.midi.MidiChannel;
 
 /**
- * Created by ahaddad15 on 8/24/17.
+ * Create on 8/24/17.
  */
 public abstract class PlayableBase implements Playable {
     protected Duration duration;

@@ -4,14 +4,12 @@ import endrawes0.music.synth.SynthesizerSingleton;
 import endrawes0.music.exception.TooManyBeatsPerMeasure;
 import endrawes0.music.exception.UnknownInstrument;
 
-import javax.sound.midi.InvalidMidiDataException;
 import javax.sound.midi.MidiUnavailableException;
-import java.io.IOException;
 
 /**
- * Created by ahaddad15 on 8/19/17.
+ * Create on 8/19/17.
  */
-public class Main {
+class Main {
 
     public static void main(String argv[]) throws InterruptedException {
         try {
@@ -24,16 +22,10 @@ public class Main {
 
             Song song = new MaryHadALittleLamb();
             song.play();
-        } catch (MidiUnavailableException e) {
+        } catch (MidiUnavailableException | TooManyBeatsPerMeasure e) {
             e.printStackTrace();
         } catch (UnknownInstrument e) {
             System.err.println("Unknown Instrument: " + e.instrumentName);
-            e.printStackTrace();
-        } catch (TooManyBeatsPerMeasure e) {
-            e.printStackTrace();
-        } catch (InvalidMidiDataException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
             e.printStackTrace();
         }
     }

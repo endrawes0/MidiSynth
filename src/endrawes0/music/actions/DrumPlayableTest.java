@@ -5,13 +5,13 @@ import endrawes0.music.Duration;
 import javax.sound.midi.MidiChannel;
 
 /**
- * Created by ahaddad15 on 8/24/17.
+ * Create on 8/24/17.
  */
-public class DrumPlayable extends PlayableBase {
+public class DrumPlayableTest extends PlayableBase {
 
     private int value;
 
-    public DrumPlayable(Duration duration, int value) {
+    public DrumPlayableTest(Duration duration, int value) {
         super(duration);
         this.value = value;
     }

@@ -13,14 +13,14 @@ import java.io.IOException;
 import java.util.Arrays;
 
 /**
- * Created by ahaddad15 on 8/23/17.
+ * Create on 8/23/17.
  */
 public class StandardKitTest implements Song {
 
     private static final int TEMPO = 60; //bpm
     private Band band = new Band();
 
-    public StandardKitTest() throws UnknownInstrument, MidiUnavailableException, TooManyBeatsPerMeasure, InvalidMidiDataException, IOException {
+    public StandardKitTest() throws UnknownInstrument, TooManyBeatsPerMeasure {
         DrumSet drums = new DrumSet();
         Sheet test = Sheet.Builder.instance()
                 .loop(Sheet.Measure.Builder.instance(
