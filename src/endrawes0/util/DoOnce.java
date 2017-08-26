@@ -1,4 +1,4 @@
-package endrawes0.music;
+package endrawes0.util;
 
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;

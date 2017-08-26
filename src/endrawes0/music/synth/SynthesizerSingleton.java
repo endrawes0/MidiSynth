@@ -1,15 +1,8 @@
-package endrawes0.music;
+package endrawes0.music.synth;
 
 import com.sun.media.sound.SoftSynthesizer;
-
-import javax.sound.midi.InvalidMidiDataException;
-import javax.sound.midi.MidiSystem;
-import javax.sound.midi.MidiUnavailableException;
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.net.URI;
+import endrawes0.music.synth.MySoundBank;
+import endrawes0.util.DoOnce;
 
 /**
  * Created by ahaddad15 on 8/19/17.

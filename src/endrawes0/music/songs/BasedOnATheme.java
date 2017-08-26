@@ -1,4 +1,4 @@
-package endrawes0.music.Songs;
+package endrawes0.music.songs;
 
 import endrawes0.music.actions.Note;
 

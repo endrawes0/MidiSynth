@@ -1,7 +1,7 @@
 package endrawes0.music;
 
-import endrawes0.music.exception.NullMidiChannelException;
 import endrawes0.music.instruments.Instrument;
+import endrawes0.music.synth.SynthesizerSingleton;
 
 import javax.sound.midi.InvalidMidiDataException;
 import javax.sound.midi.MidiChannel;
@@ -9,7 +9,6 @@ import javax.sound.midi.MidiUnavailableException;
 import javax.sound.midi.Synthesizer;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**

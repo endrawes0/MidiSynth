@@ -1,11 +1,9 @@
-package endrawes0.music.Songs;
+package endrawes0.music.songs;
 
 import endrawes0.music.*;
 import endrawes0.music.Sheet.Measure;
 import endrawes0.music.actions.Chord;
 import endrawes0.music.actions.Note;
-import endrawes0.music.actions.Tremelo;
-import endrawes0.music.exception.NullMidiChannelException;
 import endrawes0.music.exception.TooManyBeatsPerMeasure;
 import endrawes0.music.exception.UnknownInstrument;
 import endrawes0.music.instruments.DrumSet;

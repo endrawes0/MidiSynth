@@ -1,6 +1,6 @@
-import endrawes0.music.Songs.Song;
-import endrawes0.music.Songs.MaryHadALittleLamb;
-import endrawes0.music.SynthesizerSingleton;
+import endrawes0.music.songs.Song;
+import endrawes0.music.songs.MaryHadALittleLamb;
+import endrawes0.music.synth.SynthesizerSingleton;
 import endrawes0.music.exception.TooManyBeatsPerMeasure;
 import endrawes0.music.exception.UnknownInstrument;
 

@@ -1,4 +1,4 @@
-package endrawes0.music;
+package endrawes0.music.synth;
 
 import com.sun.media.sound.*;
 

@@ -1,6 +1,6 @@
 package endrawes0.music.instruments;
 
-import endrawes0.music.SynthesizerSingleton;
+import endrawes0.music.synth.SynthesizerSingleton;
 import endrawes0.music.exception.UnknownInstrument;
 
 import javax.sound.midi.*;
