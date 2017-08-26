@@ -2,7 +2,6 @@ package endrawes0.music.instruments;
 
 import endrawes0.music.TimeSignature;
 import endrawes0.music.actions.Playable;
-import endrawes0.music.exception.NullMidiChannelException;
 import endrawes0.music.exception.UnknownInstrument;
 
 import javax.sound.midi.InvalidMidiDataException;

@@ -1,9 +1,7 @@
 package endrawes0.music.instruments;
 
 import endrawes0.music.TimeSignature;
-import endrawes0.music.actions.Note;
 import endrawes0.music.actions.Playable;
-import endrawes0.music.exception.NullMidiChannelException;
 import endrawes0.music.exception.UnknownInstrument;
 
 import javax.sound.midi.InvalidMidiDataException;
@@ -23,7 +21,7 @@ public class Instrument {
         this.midiInstrument = InstrumentMap.getInstance().get(instrumentName);
     }
 
-    public void play(Playable playable, int tempo, TimeSignature timeSignature) throws NullMidiChannelException {
+    public void play(Playable playable, int tempo, TimeSignature timeSignature) {
         playable.play(midiChannel, tempo, timeSignature);
     }
 
